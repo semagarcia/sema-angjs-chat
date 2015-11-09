@@ -16,7 +16,7 @@
   },
   "main": "server-chat.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server-chat.js"
   },
   "dependencies": {
     "body-parser": "1.2.0",
