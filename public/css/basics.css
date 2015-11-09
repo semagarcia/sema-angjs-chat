@@ -1,0 +1,492 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding-top: 53px;
+  padding-bottom: 64px;
+}
+
+.header {
+  position: fixed;
+  top: 53px;
+  left: 0;
+  height: 120px;
+  width: 100%;
+}
+
+.toolbar {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  height: 53px;
+  width: 100%;
+  background: rgb(154, 174, 4);
+}
+
+.toolbar > .toolbar-left {
+  color: white;
+  width: 280px;
+  font-size: 16px;
+  height: 100%;
+}
+
+.toolbar-left > .toolbar-left-app-name {
+  padding-top: 15px;
+  padding-left: 25px;
+  height: 100%;
+}
+
+.toolbar > .toolbar-right {
+  color: white;
+  float: right;
+  margin-left: 280px;
+  margin-top: -50px;
+}
+
+.toolbar-right-options {
+  list-style: none;
+  float: left;
+  display: inline-block;
+}
+
+.profile-pic {
+  float: left;
+}
+
+.profile-whoami {
+  float: left;
+  padding-top: 8px;
+  padding-left: 15px;
+}
+
+.container {
+  background: url('../img/bg2.jpg');
+  background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  padding: 7rem;
+}
+
+.container-home {
+  background: url();
+}
+
+.main {
+  height: 100%;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 64px;
+  width: 100%;
+}
+
+.team-menu {
+  position: relative;
+  width: 280px;
+  height: 120px;  /* Mirar el header */
+  line-height: 53px;
+  font-weight: 900;
+  padding: 0 1rem;
+  color: #ffffff;
+  background: rgb(154, 174, 4) url('../img/profile-menu.png') no-repeat scroll left top / 100% auto;
+  border-bottom: 2px solid #372c36;
+  float: left;
+  cursor: pointer;
+}
+
+.profile-pic {
+  padding: 12px 0 0 0;
+}
+
+.profile-pic > img {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.14);
+  box-sizing: content-box;
+}
+
+.channel-menu_name {
+  display: inline-block;
+  padding: 0 .5rem 0 1.5rem;
+  color: #555459;
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 53px;
+  cursor: pointer;
+}
+
+.channel-menu_prefix {
+  color: #9e9ea6;
+  padding-right: .1rem;
+  font-weight: 500;
+}
+
+.listings {
+  height: 100%;
+  width: 280px;
+  float: left;
+  color: #ab9ba9;
+  background-color: #4d394b;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 173px;
+}
+
+.chat-message-zone {
+  margin-left: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  padding: 0 18px 70px 1.5rem;
+  position: fixed;
+  top: 120px;
+  width: 85%;
+  height: 80%;
+  display: table;
+}
+
+.message-history {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.listings_channels, .listings_direct-messages {
+  margin: 1rem 0 2rem;
+}
+
+.listings_header {
+  text-align: left;
+  font-size: .8rem;
+  line-height: 1.25rem;
+  margin: 0 1rem .1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ab9ba9;
+  width: 185px;
+  position: relative;
+}
+
+.channel_list {
+  list-style-type: none;
+  text-align: left;
+  color: #ab9ba9;
+}
+
+.channel {
+  height: 24px;
+  line-height: 24px;
+  -moz-border-radius-topright: 0.25rem;
+  -webkit-border-top-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  -moz-border-radius-bottomright: 0.25rem;
+  -webkit-border-bottom-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  margin-right: 17px;
+  color: #ffffff;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.unread {
+  color: #ffffff;
+  background: #eb4d5c;
+  border-radius: 9px;
+  padding: 2px 9px;
+  font-size: .8rem;
+  line-height: 14px;
+  font-weight: 700;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  float: right;
+  margin-right: 3px;
+  margin-top: 3px;
+}
+
+.channel.active {
+  background: #4c9689;
+}
+
+.channel_prefix {
+  color: #b2d5c9;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  padding-left: 1rem;
+  margin-right: 17px;
+}
+
+.message {
+  position: relative;
+  margin-top: .5rem;
+  padding: .25rem 2rem .1rem 3rem;
+  min-height: 36px;
+  display: block;
+}
+
+.message_profile-pic {
+  position: absolute;
+  left: 0;
+  display: block;
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  width: 36px;
+  height: 36px;
+  background-size: cover;
+}
+
+.message_username {
+  font-weight: 900;
+  padding-right: .25rem;
+  color: #3d3c40 !important;
+  margin-left: 0;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.message_timestamp {
+  text-align: left;
+  display: inline;
+  position: relative;
+  top: 0;
+  left: 0;
+  color: #babbbf;
+  font-size: 12px;
+  line-height: 1.2rem;
+  width: 36px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.message_content {
+  color: #8b898f;
+  font-style: italic;
+  display: block;
+  min-height: 1rem;
+}
+
+.user-menu {
+  float: left;
+  width: 280px;
+  height: 100%;
+  cursor: pointer;
+  background: rgb(154, 174, 4);
+  border-top: 2px solid #372c36;
+  padding: 7px 0 9px 8px;
+  height: 4rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.user-menu_profile-pic {
+  display: inline-block;
+  float: left;
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  width: 48px;
+  height: 48px;
+  background-size: cover;
+  margin-right: 8px;
+}
+
+.user-menu_username {
+  display: block;
+  color: #ffffff;
+  font-weight: 900;
+  line-height: 1.5rem;
+  margin-top: .2rem;
+  max-width: 120px;
+}
+
+.connection_icon {
+  width: 12px;
+  height: 12px;
+}
+
+.connection_status {
+  color: #FFF;
+}
+
+.input-box {
+  height: 100%;
+  margin-left: 280px;
+}
+
+.input-box_text {
+  font-size: .95rem;
+  width: 95%;
+  margin-left: 2%;
+  margin-bottom: auto;
+  line-height: 1.2rem;
+  border: 2px solid #e0e0e0;
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #3d3c40;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+  bottom: 0;
+  min-height: 41px !important;
+  padding: 9px 5px 9px 8px;
+}
+
+.btn-send-msg {
+  font-size: .95rem;
+  width: auto;
+  margin-left: 2%;
+  margin-bottom: auto;
+  line-height: 1.2rem;
+  border: 2px solid #e0e0e0;
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  color: #3d3c40;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+  bottom: 0;
+  padding: 9px 5px 9px 0;
+}
+
+/* Icon inside input text */
+.search_field {
+    display: inline-block;
+    border: 1px inset #ccc;
+}
+
+.search_field input {
+    border: none;
+    padding: 0;
+}
+
+.search_field button {
+    border: none;
+    background: none;
+}
+/* ----------------------- */
+
+/* Right Navbar */
+.navbar-toggle {
+  float: left;
+  margin-left: 10px;
+  display:block !important;
+}
+
+.sidebar-offcanvas {
+  /*-webkit-transition: left .3s ease-in;
+  -most-transition: left .3s ease-in;
+  transition: left .3s ease-in;*/
+  z-index:1000;
+
+  /*left: -15%;
+  width: 15%;*/
+  right : -35%;
+  width : 35%;
+  -webkit-transition: right .3s ease-in;
+  -most-transition: right .3s ease-in;
+  transition: right .3s ease-in;
+
+  position: absolute;
+  top: 50px;
+  /*height: 94.5%;*/
+  background-color: red;
+  padding: 0px;
+}
+
+.sidebar-offcanvas.active {
+  right: 0%
+}
+
+@media screen and (max-width: 767px) {
+.sidebar-offcanvas {
+  left: -80%;
+  width: 80%;
+}
+/* ----------------------- */

@@ -1,0 +1,49 @@
+<div ng-controller="mainCtrl" class="container-home">
+    <!-- Header -->
+    <div class="header">
+    	<div class="toolbar">
+    		<!-- Icono hamburguesa para ocultar los canales en dimensiones pequeñas -->
+    		<!-- Iconos a la derecha para el buscador, emails, recordatorios y off-canvas -->
+    		<div class="toolbar-left">
+    			<div class="toolbar-left-app-name">SemaCHAT</div>
+    			<!-- <img alt="Brand" src="http://www.everis.com/spain/Style%20Library/Images/General/logo_everis.png" width="70px"> -->
+    		</div>
+    		<div class="toolbar-right">
+                <div data-off-canvas data-toggle-class="sidebar-offcanvas"></div>
+                <button id="toggle" type="button" data-off-canvas data-toggle-class="sidebar-offcanvas" class="navbar-toggle">Otros</button>
+                <div class="sidebar-offcanvas">
+                    <ul>
+                        <li ng-click="openSocket()">Item 1</li>
+                        <li>Item 2</li>
+                    </ul>
+                </div>
+    		</div>
+    	</div>
+        <sema-user-profile></sema-user-profile>
+        <!-- Nombre del canal -->
+        <sema-current-room-header-info current-room="{{currentRoom.room}}" num-users="{{currentRoom.numUsers}}"></sema-current-room-header-info>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+        <div class="listings">
+        	<!-- Salas de conversación -->
+            <sema-project-channels rooms-suscribed="roomsSuscribed"></sema-project-channels>
+
+            <!-- Chats privados -->
+            <sema-p2p-dm dm-chats="dmChats"></sema-p2p-dm>
+
+            <!-- Conversaciones grupales -->
+            <sema-offtopic-channels oc-chats="ocChats"></sema-offtopic-channels>
+        </div>
+    </div>
+
+    <!-- Zona de conversación -->
+    <sema-chat-area data="messages"></sema-chat-area>
+
+    <!-- Pie -->
+    <div class="footer">
+        <sema-chat-menu></sema-chat-menu>
+        <sema-writter-box add-message="addMessage(m)"></sema-writter-box>
+    </div>
+</div>
