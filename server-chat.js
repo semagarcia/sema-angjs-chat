@@ -96,6 +96,6 @@ io.on('connection', function(clientSocket) {
 });
 
 // Starts server listening
-http.listen(3000, function() {
-  console.log('Server listening on *:3000');
+http.listen(process.env.PORT || 3000, function() {
+  console.log('Server listening on *:' + (process.env.PORT || 3000));
 });
